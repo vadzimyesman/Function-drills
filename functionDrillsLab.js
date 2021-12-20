@@ -12,6 +12,10 @@
 */
 
 //CODE HERE
+function helloWorld(){
+  console.log("Hello world!")
+}
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -21,6 +25,15 @@
 */
 
 //CODE HERE
+const jsNinja=()=>{
+ 
+  let message = "I am a Javascript ninja!"
+  console.log(message)
+  return message
+}
+  
+
+jsNinja()
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -31,6 +44,13 @@
 */
 
 //CODE HERE
+const printName = (name) =>{
+  console.log(name)
+}
+
+printName("Vadzim")
+
+
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -45,6 +65,13 @@
 */
 
 //CODE HERE
+const  greeting = (name)=>{
+  name = String(name)
+  console.log(`Hello, ${name}`) 
+}
+
+greeting("Vadzim")
+
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -59,6 +86,20 @@
 */
 
 //CODE HERE
+const compareNums = (num1,num2)=>{
+  let biggerNum = 0
+  if (num1>=num2){
+    biggerNum = num1
+  } else {
+    biggerNum = num2
+  } 
+    console.log(biggerNum)
+    return biggerNum
+    
+}
+compareNums(7,19)
+
+
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -71,7 +112,19 @@
 
 //CODE HERE
 
+const add = (num1,num2) =>{
+  let num1Number = Number(num1)
+  let num2Number = Number(num2)
+  let result = num1Number+num2Number
+  return result
+  
+} 
+  let sum = add("11","12")
+  console.log(add(2,7))
+  console.log(sum)
+  
 
+  
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
