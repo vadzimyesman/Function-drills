@@ -138,7 +138,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
+ //this one - expression
 
 
 
@@ -153,9 +153,9 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+ //this one - arrow
 // declaration
-// expression
+// this one - expression
 
 /*
   Rewrite exclaimTwo to be a single line.
@@ -163,8 +163,7 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
-
-
+//const exclaimThree = {exclaimTwo;}
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -178,7 +177,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+ // this one - declaration
 // expression
 
 
@@ -193,6 +192,19 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const nameCheck=(name)=>{
+  //name =  String(name)
+  if (name ==="Steven"){
+  console.log(`What's up,${name}`)
+  } else if (name ==="Bryan"){
+    console.log(`Hey, ${name}!`)
+  } else console.log(`Cool name, ${name}`)
+
+}
+
+nameCheck("Bryan")
+
+
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -205,6 +217,24 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+const faveColorFinder = color =>{
+  message = 0
+  if (color==="red"){
+    message = "red is a great color"
+    //console.log(message)
+  } else if (color==="green"){
+    message = "green is a solid favorite color"
+    //console.log(message)
+  } else if (color==="black"){
+    message = "so trendy"
+    //console.log(message)
+  } else {message = "evaluate your favourite color choice"
+  } return message
+}
+
+var colorRating = faveColorFinder("black")
+console.log(colorRating)
+
 
 
 ////////////////// PROBLEM 12 ////////////////////
@@ -216,17 +246,33 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const printAllNames = (param) =>{
 
+  for (i=0;i<param.length;i++){
+    console.log(param[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
   Using conditional logic, if the number is even, return 'That's not odd!'
   Otherwise, return 'That is odd indeed!'
-  Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
+  Outside the function, create a variable called `oddChecker` and set it equal to your function invoked,
+   making sure to pass in an argument.
 */
 
 //CODE HERE
+const thatsOdd = (number)=>{
+  if (number%2==0){
+    console.log("Thaat's not odd!")
+  } else {
+    console.log("That's odd indeed!")
+  }
+}
+var oddChecker = thatsOdd(13)
+
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -240,7 +286,10 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const bestMovie = (param)=>{
+  console.log(`${param} is the best movie ever!`)
+}
+var movieCritic=bestMovie("Leon")
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -254,6 +303,7 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+
 
 
 ////////////////// PROBLEM 16 ////////////////////
