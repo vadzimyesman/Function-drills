@@ -1,3 +1,4 @@
+
 /*
   Some of the following questions will ask you to use
   arrow function syntax. On the problems that don't,
@@ -303,28 +304,57 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+const bigOrSmall = (param)=>{
+  answers=[]
+  for (i=0; i<param.length;i++){
+    if (param[i]<=100){
+      answers.push("small")
+    } else answers.push("big")
+  }
+   
+   return answers
+} 
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
-let loser = 'Glimmer'
+let loser = 'Rue'
 /*
-  Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  Write a function that is called theEliminator, which takes in two arguments,
+   contestants (which will each be an array of strings), and loser (which will be a string).
+  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. 
+  Return the new contestants array.
 */
 
 //CODE HERE
+const theEliminator = (par1,par2)=>{
+  
+  for (i=0;i<par1.length;i++){
 
+    if (par1[i]===par2){
+        console.log(`loser is ${par1[i]}`)
+        let loserIs = par1.splice(i,1)
+      }
+    }   return (par1)
+  }
+var loserCheck = theEliminator(contestants,loser)
+console.log(loserCheck)
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
-  Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
+  Write a function that takes in one argument, a string. The function should then console.log that string,
+   in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
+const makeItUpper = (ourText) => `${ourText.toUpperCase()}`
+console.log(makeItUpper(sampleString))
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -337,6 +367,43 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+//CODE HERE
+//const { fail } = require('assert');
+const readline = require('readline');
+
+const reader = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+
+
+
+  reader.question("Please provide an email for verification: ", function(input){
+    email = String(input)
+      if (email.includes("@")){
+      console.log("Email verified")
+      
+      noWhiteSpaces = email.replaceAll(" ","")
+      console.log(`${noWhiteSpaces} can be used`)
+      return noWhiteSpaces
+      
+      
+      } else {
+      console.log("Must provide a valid email address")
+      console.log(`the one entered is: ${email}`)
+      return noWhiteSpaces = email.replaceAll(" ","")
+      
+      } 
+    reader.close()
+ 
+  });
+  
+  
+
+
+//mathSymbol = tokens[0];
+
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -358,7 +425,9 @@ let sampleString = "Hi, my name is Kylo."
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. In the body of the function,
+   write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, 
+   false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
